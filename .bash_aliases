@@ -1,0 +1,7 @@
+alias rm='rm -i'
+alias mv='mv -i'
+alias ping='ping -c 4'
+alias lsports='netstat -tulanp'
+alias diff='colordiff'
+alias apt-get='apt'
+alias wget='wget -c'
