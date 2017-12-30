@@ -36,6 +36,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'gregsexton/MatchTag'
 Plugin 'matchit.zip'
 Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-endwise'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
