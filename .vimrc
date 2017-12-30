@@ -29,7 +29,6 @@ Plugin 'vim-coffee-script'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'Solarized'
 Plugin 'vim-sexp'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tComment'
@@ -91,20 +90,20 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+    au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    " Also don't do it when the mark is in the first line, that is the default
+    " position when opening a file.
+    autocmd BufReadPost *
+          \ if line("'\"") > 1 && line("'\"") <= line("$") |
+          \   exe "normal! g`\"" |
+          \ endif
 
   augroup END
 
@@ -119,7 +118,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-      \ | wincmd p | diffthis
+        \ | wincmd p | diffthis
 endif
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -127,7 +126,6 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 set nu
 
-" map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw<CR>
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw
 
 function! CmdLine(str)
@@ -180,7 +178,6 @@ autocmd InsertEnter * syn clear EOLWS | syn match EOLWS excludenl /\s\+\%#\@!$/
 autocmd InsertLeave * syn clear EOLWS | syn match EOLWS excludenl /\s\+$/
 highlight EOLWS ctermbg=red guibg=red
 
-"nmap <silent> <Leader><space> :call <SID>StripTrailingWhitespace()<CR>
 nmap <Leader><space> :StripWhitespace<CR>
 
 map <leader>cc :botright cope<cr>
@@ -198,16 +195,16 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ 
 
 
 function! CurDir()
-    let curdir = substitute(getcwd(), '/home/waleed/', "~/", "g")
-    return curdir
+  let curdir = substitute(getcwd(), '$HOME', "~/", "g")
+  return curdir
 endfunction
 
 function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
+  if &paste
+    return 'PASTE MODE  '
+  else
+    return ''
+  endif
 endfunction
 
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
@@ -219,7 +216,6 @@ autocmd QuickFixCmdPost *grep* cwindow
 au FileType python  set tabstop=4 shiftwidth=4 textwidth=140 softtabstop=4
 
 hi CursorColumn cterm=NONE ctermbg=black
-"ctermfg=white guibg=darkred guifg=white
 set cursorcolumn
 
 " au VimEnter * RainbowParenthesesToggle
@@ -228,20 +224,20 @@ set cursorcolumn
 " au Syntax * RainbowParenthesesLoadBraces
 
 let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+      \ ['brown',       'RoyalBlue3'],
+      \ ['Darkblue',    'SeaGreen3'],
+      \ ['darkgreen',   'firebrick3'],
+      \ ['darkcyan',    'RoyalBlue3'],
+      \ ['darkred',     'SeaGreen3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['brown',       'firebrick3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['Darkblue',    'firebrick3'],
+      \ ['darkgreen',   'RoyalBlue3'],
+      \ ['darkcyan',    'SeaGreen3'],
+      \ ['darkred',     'DarkOrchid3'],
+      \ ['red',         'firebrick3'],
+      \ ]
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_ruby_checkers = ['rubocop']
@@ -258,7 +254,7 @@ let g:vim_markdown_folding_disabled=1
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 set relativenumber
 set number
