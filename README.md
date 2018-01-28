@@ -1,1 +1,5 @@
-This repo is intended to contain dot files i use for my Linux machines, to help keep things synchronized.
+# dot-files
+
+I put these dot files together to help keep things synced between my machines.
+
+The files include the vimrc, bash_aliases, tmux_conf, and bashrc.
