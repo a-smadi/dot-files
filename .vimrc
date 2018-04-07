@@ -276,3 +276,7 @@ set smartcase
 " Don't use ignorecase for * and #
 :nnoremap * /\C\<<C-R>=expand('<cword>')<CR>\><CR>
 :nnoremap # ?\C\<<C-R>=expand('<cword>')<CR>\><CR>
+
+command Q q
+command W w
+command WQ wq
