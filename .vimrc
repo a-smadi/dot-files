@@ -258,7 +258,7 @@ syntax enable
 set background=dark
 colorscheme gruvbox
 
-set relativenumber
+" set relativenumber
 set number
 set autoindent
 set wildmenu
