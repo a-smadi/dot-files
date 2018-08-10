@@ -39,6 +39,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-endwise'
 Plugin 'pry'
+Plugin 'thoughtbot/vim-rspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -281,3 +282,9 @@ set smartcase
 command Q q
 command W w
 command WQ wq
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
