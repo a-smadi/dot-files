@@ -292,3 +292,5 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 set tags=./tags;
+
+map <Leader>b :Gblame<CR>
