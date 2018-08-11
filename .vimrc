@@ -42,6 +42,7 @@ Plugin 'pry'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'gorodinskiy/vim-coloresque.git'
 Plugin 'mileszs/ack.vim'
+Plugin 'christoomey/vim-titlecase'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
