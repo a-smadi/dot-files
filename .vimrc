@@ -293,4 +293,4 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 set tags=./tags;
 
-map <Leader>b :Gblame<CR>
+map <Leader>bb :Gblame<CR>
