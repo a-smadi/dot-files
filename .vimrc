@@ -43,6 +43,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'christoomey/vim-titlecase'
 Plugin 'christoomey/vim-sort-motion'
 Plugin 'vim-scripts/ReplaceWithRegister'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -295,3 +296,4 @@ map <Leader>a :call RunAllSpecs()<CR>
 set tags=./tags;
 
 map <Leader>bb :Gblame<CR>
+nmap <F8> :TagbarToggle<CR>
