@@ -21,7 +21,6 @@ Plugin 'Puppet-Syntax-Highlighting'
 Plugin 'EasyMotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rainbow_parentheses.vim'
 Plugin 'vim-coffee-script'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
@@ -223,27 +222,6 @@ au FileType python  set tabstop=4 shiftwidth=4 textwidth=140 softtabstop=4
 
 hi CursorColumn cterm=NONE ctermbg=black
 set cursorcolumn
-
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
-
-let g:rbpt_colorpairs = [
-      \ ['brown',       'RoyalBlue3'],
-      \ ['Darkblue',    'SeaGreen3'],
-      \ ['darkgreen',   'firebrick3'],
-      \ ['darkcyan',    'RoyalBlue3'],
-      \ ['darkred',     'SeaGreen3'],
-      \ ['darkmagenta', 'DarkOrchid3'],
-      \ ['brown',       'firebrick3'],
-      \ ['darkmagenta', 'DarkOrchid3'],
-      \ ['Darkblue',    'firebrick3'],
-      \ ['darkgreen',   'RoyalBlue3'],
-      \ ['darkcyan',    'SeaGreen3'],
-      \ ['darkred',     'DarkOrchid3'],
-      \ ['red',         'firebrick3'],
-      \ ]
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_ruby_checkers = ['rubocop']
