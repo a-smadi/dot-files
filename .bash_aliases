@@ -21,6 +21,3 @@ alias a='git add -p'
 alias c='git commit -m'
 alias p='git push'
 alias m='bundle exec rake db:migrate'
-alias prod="cx ssh -s 'Loan Market Platform' -e production angelfish"
-alias uat="cx ssh -s 'Loan Market Platform' -e uat archerfish"
-alias sit="cx ssh -s 'Loan Market Platform' -e sit arrowfish"
