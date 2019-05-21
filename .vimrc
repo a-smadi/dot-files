@@ -274,3 +274,4 @@ set tags=./tags;
 
 map <Leader>bb :Gblame<CR>
 nmap <F8> :TagbarToggle<CR>
+map <Leader>r :redraw!<CR>
