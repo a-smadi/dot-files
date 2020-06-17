@@ -32,3 +32,5 @@ alias dbreset='bundle exec rake db:drop db:create && psql sherpa_development < .
 alias xit='exit'
 alias exut='exit'
 alias exot='exit'
+alias ext='exit'
+alias :q='exit'
