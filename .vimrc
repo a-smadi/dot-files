@@ -42,6 +42,7 @@ Plugin 'christoomey/vim-sort-motion'
 Plugin 'vim-scripts/ReplaceWithRegister'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'slim-template/vim-slim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
