@@ -133,6 +133,8 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 set nu
 
+set re=2
+
 map <F3> :execute "noautocmd vimgrep /" . expand("<cword>") . "/gj **/*." .  expand("%:e") <Bar> cw
 
 function! CmdLine(str)
